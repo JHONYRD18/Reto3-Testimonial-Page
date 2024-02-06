@@ -1,0 +1,148 @@
+:root {
+  /*paleta de colores*/
+  --color1: #f5c044;
+  --color2: #4ca154;
+  --color3: #18181b;
+  --color4: #52525a;
+  --color5: #d4d4d8;
+  --color6: #fafaf9;
+  --color7: #ffff;
+
+  /*font size*/
+  --fs-Heading: 2.25rem;
+  --fs-body1: 1.25rem;
+  --fs-body2: 1rem;
+  --fs-lits-items: 0.875;
+
+  --fuente-principal: "Sora", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  list-style: none;
+  margin: 0;
+}
+/* Fin de los globales*/
+
+body {
+  font-family: var(--fuente-principal);
+  background-color: var(--color6);
+  line-height: 1.5;
+}
+
+.general {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
+
+.contenedor {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 72px;
+  gap: 40px;
+}
+
+@media(max-width: 640px) {
+  .general {
+    height: 100%;
+  }
+
+  .contenedor {
+    grid-template-columns: repeat(1,2fr);
+    margin: 65px 25px 200px;
+    gap: 40px;
+  }
+}
+/* Inicio de la parte Reviewers*/
+
+.stars {
+  width: 40px;
+}
+
+.reviewers {
+  width: 100%;
+}
+
+.titulo_reviewers {
+  font-size: var(--fs-Heading);
+  margin-bottom: 10px;
+}
+
+.texto_reviewers {
+  width: 100%;
+  font-size: var(--fs-body1);
+  font-weight: 400;
+  line-height: 1.7;
+  margin-bottom: 2.2rem;
+  text-align: left;
+}
+
+.lista {
+  width: 100%;
+}
+
+.lista li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.lista .text_list {
+  margin-left: 10px;
+}
+
+.lista span {
+  font-size: var(--fs-lits-items);
+}
+
+/* Fin de la parte Reviewers*/
+
+/* Inicio de la parte de comentarios*/
+.parte2 {
+  width: 100%;  
+  align-items: center;
+}
+
+.fondo_google {
+  background-color: var(--color7);
+  width: 360px;  
+  border-radius: 1rem;
+  margin-bottom: 2.5rem;
+  margin-left: 190px;
+}
+ 
+.fondo_meta {
+  background-color: var(--color7);
+  width: 360px;  
+  border-radius: 1rem;
+  margin-right: 190px;
+}
+
+.contenedor_google,
+.contenedor_meta {
+  padding: 40px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+.google, 
+.meta {
+  width: 83px;
+  margin-right: 20px;
+}
+
+.autor {
+  margin: 10px 0;
+  font-size: var(--fs-lits-items);
+}
+
+.comentario {
+  font-size: var(--fs-body2);
+}
+
+/* fin de la parte de comentarios*/
